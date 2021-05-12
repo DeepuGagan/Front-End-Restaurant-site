@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+.part-1{
+    background: #307D99 url(Final.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(240, 251, 255);
+    text-align: center;
+    padding: 1em 4em 4em 4em;
+
+}
+
+header{
+    padding: 1em 0;
+    font-weight: bold;
+    
+}
+
+.part-1 a{
+    text-decoration: none;
+    color: #00b7ff;
+    font-weight:5px;
+    font-size: 2em;
+    text-shadow:2px 2px 4px white;
+}
+
+section{
+    margin: 0 1em;
+}
+
+h1{
+    font-size: 2.5rem;
+    margin: 2em 0 1.2em ;
+}
+
+h1 span{
+    text-transform: uppercase;
+    display: block;
+    font-size: 1.4em;
+    position: relative;
+    z-index: 1;
+}
+
+h1 span::before {
+    content: '';
+    position: absolute;
+    width:3em;
+    background: #3AA4DA;
+    height: .3em;
+    bottom: 0;
+    z-index: -1;
+    margin-left: -.3em;
+    border-radius: 3%;
+    transform: translateY(-6px);
+}
+
+.part-1 p{
+    font-weight: bold;
+    margin: 0 1em 3em;
+}
+
+.part-form {
+      background-color: aliceblue; 
+      margin: 2em -1em 0;
+      
+}
+
+label {
+    color: black;
+    font-weight: bold;
+    display: block;
+    padding-top: .5em;
+    margin-bottom: 1em;
+    font-size: 1.2em;
+}
+
+input[type=text] {
+    border: 1px solid #3AA4DA;
+    border-radius: .3em;
+    width: 95%;
+    padding: .5em;
+    margin-top: 1.2em;
+}
+
+.part-form p {
+    color: gray;
+    margin-bottom: 1.5em;
+    font-weight: normal;
+    font-size: .9em;
+    margin-top: .3em;
+}
+
+input[type=button] {
+    background-color:rgb(0, 178, 248) ;
+    border: none;
+    width: 95%;
+    color: indigo;
+    font-weight: bold;
+    padding: .4em;
+    margin-bottom: .2em;
+    border-radius: .5em;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+input[type=button]:hover {
+    color:rgb(0, 178, 248) ;
+    background-color: indigo;
+}
+
+.part-2{
+    margin: 0;
+    background-color: black;
+    color: aliceblue;
+}
+
+.part-2-right{
+    text-align: center;
+    margin: 3em 1em;
+}    
+
+h2{
+   text-transform: uppercase;
+   position: relative;
+   margin-top:0;
+   z-index: 1;
+}
+
+h2::before {
+    content: '';
+    position: absolute;
+    width:11em;
+    background: #3AA4DA;
+    height: .5em;
+    bottom: 0;
+    margin-left: -.3em;
+    z-index: -1;
+    transform: translateY(-3px);
+    border-radius: 30%;
+}
+
+img{
+    width: 100% ;
+    
+}
+
+p{
+    line-height: 2em;
+}
+
+.over{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 1;
+    place-content: center;
+    color: thistle;
+}
+
+@media (min-width: 730px){
+    section{
+        margin: 0 4em;
+    }
+    .part-form {
+        background-color: aliceblue; 
+        margin: 2em -4em 0;
+        
+  }
+}
+
+@media (min-width: 930px){
+    .part-1{
+        text-align: left;   
+    }
+    .part-1 p{
+        margin: 0 0 3em;   
+    }
+    .part-1 section{
+        width: 65%;   
+    }
+    
+}
+
+.part-form{
+    margin: 2em 0 0;
+    padding: 2em;
+    border-radius: .7em;
+    box-shadow: 10px 10px 10px#3AA4DA;
+}
+
+form{
+    display: flex ;
+}
+
+.part-form-left{
+    width: 70%;
+}
+
+label{
+    margin: 0;
+}
+
+input[type=button]{
+    height: fit-content;
+    font-size: 1.1em;
+    margin-left: 1em;
+    margin-top: 2.2em;
+    padding: .7em 0;
+    width: 30%;
+}
+
+.part-1 p{
+    margin-bottom: 0;
+}
+
+section.part-2{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-areas:"bowl content" ;
+}
+
+.part-2-right{
+    grid-area: content;
+    padding: 0 10%;
+    text-align: left;
+    align-self:center ;
+}
+
+img{
+    grid-area: bowl ;
+}
+
+.part-11{
+    animation: fadein 2s forwards;
+}
+
+@keyframes fadein{
+        from{
+            opacity: 0;
+            transform:translateY(-10em) ;
+        }
+        to{
+            opacity: 1;
+            transform:translateY(0) ;
+        }
+    }
